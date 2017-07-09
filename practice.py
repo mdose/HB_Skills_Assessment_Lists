@@ -300,12 +300,12 @@ def average(numbers):
     mean = 0
     index = 0
     sum_numbers = 0
-    
+
     while index < len(numbers):
         sum_numbers += numbers[index]
         index += 1
 
-    mean = sum_numbers / index
+    mean = float(sum_numbers) / index
 
     return mean
 
