@@ -214,7 +214,7 @@ def sum_numbers(numbers):
     sum_numbers = 0
     #add each index to the next one until the end of list
     while index < len(numbers):
-        sum_numbers = sum_numbers + numbers[index]
+        sum_numbers += numbers[index]
         index += 1
 
     return sum_numbers
@@ -244,7 +244,7 @@ def mult_numbers(numbers):
     mult_numbers = 1
     #mult each index to the next one until the end of list
     while index < len(numbers):
-        mult_numbers = mult_numbers * numbers[index]
+        mult_numbers *= numbers[index]
         index += 1
 
     return mult_numbers
@@ -267,7 +267,14 @@ def join_strings(words):
         ''
     """
 
-    return "Not the right thing"
+    join_strings = ''
+
+    #concatenate words
+
+    for word in words:
+        join_strings += word
+
+    return join_strings
 
 
 def average(numbers):
