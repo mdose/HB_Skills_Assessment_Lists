@@ -297,7 +297,17 @@ def average(numbers):
     a feel free to provide a good solution here.)
     """
 
-    return 0
+    mean = 0
+    index = 0
+    sum_numbers = 0
+    
+    while index < len(numbers):
+        sum_numbers += numbers[index]
+        index += 1
+
+    mean = sum_numbers / index
+
+    return mean
 
 
 def join_strings_with_comma(words):
@@ -317,7 +327,21 @@ def join_strings_with_comma(words):
         'Pretzel'
     """
 
-    return ""
+    join_strings = ''
+
+    #concatenate words
+    if len(words) == 1:
+        join_strings = words[0]
+    elif len(words) == 0:
+        join_strings = ''
+    else:
+        for word in words:
+            if word == words[-1]:
+                join_strings += word
+            else:
+                join_strings += word + ', '
+
+    return join_strings
 
 
 def reverse_list(items):
