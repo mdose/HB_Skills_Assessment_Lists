@@ -240,7 +240,14 @@ def mult_numbers(numbers):
         1
     """
 
-    return None
+    index = 0
+    mult_numbers = 1
+    #mult each index to the next one until the end of list
+    while index < len(numbers):
+        mult_numbers = mult_numbers * numbers[index]
+        index += 1
+
+    return mult_numbers
 
 
 def join_strings(words):
