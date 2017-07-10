@@ -392,8 +392,21 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
+#come back to
 
-    return []
+    # reverse_list = []
+    # for item in items:
+    #     reverse_list.append(item)
+
+    #     ##for index in reverse_list:
+    #     ##somhow swith order of indexes ...I can't think anymore... I just want
+    #     ##to use the reverse method...
+
+    #     ##take the item and put it in the last index of reverse_list,
+    #     ##then second to last, etc. I dunno...
+
+    # return reverse_list
+    pass
 
 
 def duplicates(items):
@@ -421,8 +434,23 @@ def duplicates(items):
         >>> orig
         ['apple', 'apple', 'berry']
     """
+    duplicates = []
+    if items == []:
+        return duplicates
+    else:
+        items.sort()
+        index = 0
 
-    return []
+        for index, item in enumerate(items):
+            try:
+                if item == items[index + 1] or item == items[-1] or item == items[1:-1]:
+                    if item not in duplicates:
+                        duplicates.append(item)
+                index += 1
+            except IndexError:
+                break
+
+    return duplicates
 
 
 def find_letter_indices(words, letter):
@@ -452,8 +480,20 @@ def find_letter_indices(words, letter):
     `None`.)
     """
 
-    return []
+    # find_letter_indices = []
+    # index = 0
+    # for word in words:
+    #     for index, character in enumerate(word):
+    #     ##take each word and break it down into characters
+    #         if character == letter:
+    #         ##take each character and compare it to the specialletter
+    #            find_letter_indices.append(character[index])
+                 ##append that character to a new list
+    #         index += 1
+    # return find_letter_indices
 
+    pass
+    #ran out of time; but felt like I was close!
 
 #####################################################################
 # END OF PRACTICE: You can ignore everything below.
